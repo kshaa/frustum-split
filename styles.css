@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: #f2f2f2;
+}
+
+.immersion {
+    max-width: 500px;
+    margin: 50vh 0 0 50vw;
+    background: #fff;
+    transform: translate(-95%, -95%);
+    padding: 10px 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.equal-size {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+#background-three {
+    z-index: -2;
+}
+
+#foreground-three {
+    z-index: 2;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Three.js - Split camera frustum</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="immersion.js"></script>
+    <script>
+        ready(function () {
+            var backgroundCanvas = document.getElementById("background-three");
+            var foregroundCanvas = document.getElementById("foreground-three");
+            immerseMe(backgroundCanvas, foregroundCanvas);
+        });
+    </script>
+</head>
+<body>
+    <canvas id="background-three" class="equal-size">
+    </canvas>
+    <div class="immersion">
+        <p>This whole block is an actual html div, nothing special about it.</p>
+        <p>The floating 3d objects however are rendered in two canvas elements - one for foreground and one for background.</p>
+        <p>They are rendered using three.js w/ two identical cameras, but w/ different frustums.</p>
+        <p>Bg camera frustum renders everything behind this block, and the fg camera frustum renders everything in front.</p>
+        <p>The effect makes it seem like an html div is immersed in a three.js scene, but actually the div is wrapped with two 3d renderers splitting the 3d world at the div plane.</p>
+    </div>
+    <canvas id="foreground-three" class="equal-size">
+    </canvas>
+</body>
+</html>
